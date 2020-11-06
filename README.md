@@ -34,7 +34,7 @@ REPO Link:
 [Heroku](https://da-google-books.herokuapp.com/)
 #
 #
-To Me A Master at this:
+To Be A Master at this:
 - [x] Awareness
 - [x] Knowledge
 - [ ] Skills
