@@ -11,9 +11,8 @@ function App() {
       <Router>
             <Navbar />
             <Switch>
-              <Route exact path="/books/saved" component={SaveBook} />
-              <Route exact path="/books/search" component={SearchBook} />
-              <Route exact path="/books" component={AllBooks} />
+              <Route exact path="/saved" component={Saved} />
+              <Route exact path="/search" component={Search} />
               <Route exact path="/" component={Home} />
             </Switch>
       </Router>

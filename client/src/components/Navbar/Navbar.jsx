@@ -1,9 +1,10 @@
 import React from "react";
+import { BrowserRouter as Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link to="/" className="navbar-brand">
+      <Link to="./Home" className="navbar-brand">
         Google-Books
       </Link>
 
@@ -22,24 +23,24 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <NavLink to="/" className="nav-link">
+            <Link to="/" className="nav-link">
               Home
-            </NavLink>
+            </Link>
           </li>
           <li className="books">
-            <NavLink to="/books" className="nav-link">
+            <Link to="./Home" className="nav-link">
               Books
-            </NavLink>
+            </Link>
           </li>
           <li className="nav-item">
-            <NavLink to="/books/search" className="nav-link">
+            <Link to="./search" className="nav-link">
               Search New Book
-            </NavLink>
+            </Link>
           </li>
           <li className="nav-item">
-            <NavLink to="/books/saved" className="nav-link">
+            <Link to="./saved" className="nav-link">
               Saved Books
-            </NavLink>
+            </Link>
           </li>
         </ul>
       </div>
