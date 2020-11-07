@@ -2,8 +2,8 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
-import Saved from "../src/pages/savedController";
-import Search from "../src/pages/searchController";
+import Saved from "./containers/pages/savedController";
+import Search from "./containers/pages/searchController";
 
 function App() {
   return (
