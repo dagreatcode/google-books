@@ -13,7 +13,7 @@ REPO Link:
 ## I think my layout was great. Seems to get better....
 ![React App Picture](./image/img1.png)
 #
-## The server is always a no brain. Tricky when imputing a mongoose DB.
+## The server is always a no brainer. Tricky when imputing a mongoose DB.
 ![React App Picture](./image/img2.png)
 #
 ## AXIOS will always be easy. Tricky when using an KEY.
