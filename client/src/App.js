@@ -17,7 +17,6 @@ function App() {
     <Switch>
       <Route exact path="/" component={Home} />
       <Route exact path="/AllBooks" component={AllBooks} />
-      <Route exact path="/Books" component={Books} />
       <Route exact path="/Saved" component={Saved} />
       <Route exact path="/Search" component={Search} />
       <Route component={NotFound} />

@@ -1,41 +1,32 @@
-import React from "react";
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
 
-const Books = () => {
-  return (
-    <div>
-      <h1>These Are Your Books. </h1>
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-};
+const BookSchema = new Schema({
+    title: {
+        type: String,
+        trim: true,
+        required: true
+    },
+    author: {
+        type: String,
+        trim: true,
+        required: true
+    },
+    description: {
+        type: String,
+        trim: true,
+        required: true
+    },
+    image: {
+        type: String,
+        required: "Image is needed"
+    },
+    link: {
+        type: String, 
+        required: "Link is needed"
+    }
+});
 
-export default Books;
+const Book = mongoose.model("Book", BookSchema);
+
+module.exports = Book;
