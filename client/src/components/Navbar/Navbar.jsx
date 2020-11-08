@@ -1,8 +1,5 @@
 import React from "react";
-import Books from "../../containers/Books/Books";
-import Saved from "../../containers/pages/savedController";
-import Search from "../../containers/pages/searchController";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -26,32 +23,24 @@ const Navbar = () => {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link to="/" className="nav-link">
+            <NavLink to="/" className="nav-link">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="Books" className="nav-link">
+            <NavLink to="Books" className="nav-link">
               Books
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="Search" className="nav-link">
+            <NavLink to="Search" className="nav-link">
               Search New Book
-            </Link>
+            </NavLink>
           </li>
           <li className="nav-item">
-            <Link to="Saved" className="nav-link">
+            <NavLink to="Saved" className="nav-link">
               Saved Books
-            </Link>
-            <Router>
-            <Navbar />
-            <Switch>
-              <Route exact path="/Saved" component={Saved} />
-              <Route exact path="/Search" component={Search} />
-              <Route exact path="/" component={Books} />
-            </Switch>
-            </Router>
+            </NavLink>
           </li>
         </ul>
       </div>
