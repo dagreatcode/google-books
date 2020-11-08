@@ -26,7 +26,7 @@ REPO Link:
 ![React App Picture](./image/img5.png)
 #
 ## Here is where it took a little minute but the dployed link is at the top. It may take a few seconds to load but it works.
-<img src="./image/gif.gif" alt="Big Win">
+
 ![React App Picture](./image/gif.gif)
 
 # Here is the link to the deployed Heroku Site. 
