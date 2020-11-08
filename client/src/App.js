@@ -1,6 +1,8 @@
 import './App.css';
 import Navbar from "../src/components/Navbar/Navbar";
+import Home from "./containers/Home/Home"
 import Books from "./containers/Books/Books";
+import AllBooks from "./containers/AllBooks/AllBooks"
 import Saved from "./containers/pages/savedController";
 import Search from "./containers/pages/searchController";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
@@ -12,7 +14,9 @@ function App() {
     <Router>
     <Navbar />
     <Switch>
-      <Route exact path="/" component={Books} />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/AllBooks" component={AllBooks} />
+      <Route exact path="/Books" component={Books} />
       <Route exact path="/Saved" component={Saved} />
       <Route exact path="/Search" component={Search} />
     </Switch>

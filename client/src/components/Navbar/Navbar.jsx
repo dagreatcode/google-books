@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <Link to="./Home" className="navbar-brand">
+      <Link to="AllBooks" className="navbar-brand">
         Google-Books
       </Link>
 
