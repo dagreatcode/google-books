@@ -22,13 +22,12 @@ REPO Link:
 ## I did Manage to get the mongo atlas started for production and deploy.
 ![React App Picture](./image/img4.png)
 #
-##
+## This was my guide from our teacher. It helped so much along the way... Thanks Man...
 ![React App Picture](./image/img5.png)
 #
-##
-![React App Picture](./image/img6.png)
-#
-#
+## Here is where it took a little minute but the dployed link is at the top. It may take a few seconds to load but it works.
+<img src="./image/gif.gif" alt="Big Win">
+![React App Picture](./image/gif.gif)
 
 # Here is the link to the deployed Heroku Site. 
 [Heroku](https://da-google-books.herokuapp.com/)
