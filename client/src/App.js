@@ -1,7 +1,6 @@
 import './App.css';
 import Navbar from "../src/components/Navbar/Navbar";
 import Home from "./containers/Home/Home"
-import Books from "./containers/Books/Books";
 import AllBooks from "./containers/AllBooks/AllBooks"
 import Saved from "./containers/pages/savedController";
 import Search from "./containers/pages/searchController";
