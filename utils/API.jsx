@@ -1,3 +1,13 @@
+import axios from "axios";
+const BASEURL = "https://www.googleapis.com/?t=";
+const APIKEY = "AIzaSyDRtTXAuQaLIOTSrmPjGhFInKWwLvg_AnI";
+
+export default {
+  search: function(query) {
+    return axios.get(BASEURL + query + APIKEY);
+  }
+};
+
 // 6. Add the following Express routes for your app:
 
 // * `/api/books` (get) - Should return all saved books as JSON.
