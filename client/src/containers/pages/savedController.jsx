@@ -5,7 +5,7 @@ const savedController = () => {
     <div>
       <h1>Saved Page</h1>
       <table class="table">
-        <caption>List of users</caption>
+        <caption>List of Your Books</caption>
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -35,7 +35,6 @@ const savedController = () => {
           </tr>
         </tbody>
       </table>
-      Z¸¸
     </div>
   );
 };
