@@ -6,6 +6,7 @@ import AllBooks from "./containers/AllBooks/AllBooks"
 import Saved from "./containers/pages/savedController";
 import Search from "./containers/pages/searchController";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import NotFound from './containers/NotFound/NotFound';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route exact path="/Books" component={Books} />
       <Route exact path="/Saved" component={Saved} />
       <Route exact path="/Search" component={Search} />
+      <Route component={NotFound} />
     </Switch>
     </Router>
     </div>
