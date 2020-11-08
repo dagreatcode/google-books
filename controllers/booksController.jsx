@@ -2,42 +2,78 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-// TODO: Build an authentication/authorization controller.
-
 router.get("/", (req, res) => {
-    // TODO: Restrict which fields are returned. NO PASSWORD!
-  db.User.find({})
-    .populate("books")
-    .then((foundUsers) => {
-      res.json(foundUsers);
+  db.Book.find({})
+    .populate("author", "firstName lastName")
+    .then((foundBooks) => {
+      res.json(foundBooks);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "Failed to retrieve all books.",
+      });
     });
 });
 
 router.get("/:id", (req, res) => {
-    // TODO: Restrict which fields are returned. NO PASSWORD!
-  db.User.find({ _id: req.params.id }).then((foundUser) => {
-    res.json(foundUser);
-  });
+  db.Book.findOne({ _id: req.params.id })
+    .populate("author")
+    .then((foundBook) => {
+      res.json(foundBook);
+    });
 });
 
 router.post("/", (req, res) => {
-  db.User.create(req.body).then((newUser) => {
-    res.json(newUser);
+  const newBook = {
+    title: req.body.title,
+    pages: req.body.pages,
+    author: req.body.author,
+  };
+  db.Book.create(newBook).then((newBook) => {
+    res.json(newBook);
   });
 });
 
 router.put("/:id", (req, res) => {
-    // TODO: Restrict which fields are editable
-  db.User.findByIdAndUpdate(req.params.id, req.body, { new: true }).then(
-    (updatedUser) => {
-      res.json(updatedUser);
-    }
-  );
+  const updatedBook = {
+    title: req.body.title,
+    pages: req.body.pages,
+    author: req.body.author,
+  };
+  db.Book.findOneAndUpdate(
+    { _id: req.params.id },
+    updatedBook,
+    { new: true }
+  )
+    .then((updatedBook) => {
+      if (!updatedBook) {
+        res.status(404).json({
+          error: true,
+          data: null,
+          message: "Unable to find that book.",
+        });
+      } else {
+        res.json({
+          error: false,
+          data: updatedBook,
+          message: "Successfully updated book.",
+        });
+      }
+    })
+    .catch((err) => {
+      res.status(500).json({
+        error: true,
+        data: null,
+        message: "An error occurred updating your book.",
+      });
+    });
 });
 
 router.delete("/:id", (req, res) => {
-    // TODO: Figure out how to restrict account deletion.
-  db.User.findByIdAndDelete(req.params.id).then((result) => {
+  db.Book.findByIdAndDelete(req.params.id).then((result) => {
     res.json(result);
   });
 });
