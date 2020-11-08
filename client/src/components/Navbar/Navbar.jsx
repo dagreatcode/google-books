@@ -1,5 +1,8 @@
 import React from "react";
-import { BrowserRouter as Link } from "react-router-dom";
+import Books from "../../containers/Books/Books";
+import Saved from "../../containers/pages/savedController";
+import Search from "../../containers/pages/searchController";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -27,20 +30,28 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="books">
-            <Link to="./Home" className="nav-link">
+          <li className="nav-item">
+            <Link to="Books" className="nav-link">
               Books
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="./search" className="nav-link">
+            <Link to="Search" className="nav-link">
               Search New Book
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="./saved" className="nav-link">
+            <Link to="Saved" className="nav-link">
               Saved Books
             </Link>
+            <Router>
+            <Navbar />
+            <Switch>
+              <Route exact path="/Saved" component={Saved} />
+              <Route exact path="/Search" component={Search} />
+              <Route exact path="/" component={Books} />
+            </Switch>
+            </Router>
           </li>
         </ul>
       </div>
