@@ -1,6 +1,13 @@
-import React from "react";
+import React, {useEffect} from "react";
+import axios from "axios"
+
 
 const AllBooks = () => {
+    useEffect(() => {
+      axios.get("/api/books").then(response => {
+        console.log(response.data);
+      })
+    }), [])
   return (
     <div>
         <h1>A Few Googles Books</h1>
