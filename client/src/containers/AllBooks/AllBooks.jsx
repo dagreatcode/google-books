@@ -7,7 +7,7 @@ const AllBooks = () => {
       axios.get("/api/books").then(response => {
         console.log(response.data);
       })
-    }), [])
+    }, []);
   return (
     <div>
         <h1>A Few Googles Books</h1>
