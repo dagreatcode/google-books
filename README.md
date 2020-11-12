@@ -7,7 +7,7 @@ REPO Link:
 
 [https://github.com/dagreatcode/google-books.git](REPO)
 
-[![Vincent's github stats](https://github-readme-stats.vercel.app/api?username=DaGreatCode&theme=blue-green)](https://github.com/DaGreatCode/github-readme-stats)
+[![Vincent's github stats](https://github-readme-stats.vercel.app/api?username=DaGreatCode&theme=blue-green)](https://github.com/dagreatcode)
 
 # google-books (DB)
 
