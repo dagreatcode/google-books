@@ -1,8 +1,9 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios"
 
 
 const AllBooks = () => {
+      const [books, setBooks] = useState([])
     useEffect(() => {
       axios.get("/api/books").then(response => {
         console.log(response.data);
